@@ -1,2 +1,3 @@
-# fba-scripts
-Various Python scripts for creating FBA models
+# FBA Workshop Materials
+
+Python scripts, files, and materials for FBA workshop.
