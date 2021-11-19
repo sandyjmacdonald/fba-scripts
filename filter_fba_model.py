@@ -39,7 +39,6 @@ with open(tags_file, "r") as f:
 known_genes = [str(k) for k in locus_tags.keys()]
 
 # Read in the "known" model
-model_file = "iAF1260.json"
 model = cobra.io.load_json_model(model_file)
 
 # Create a new model to add our matching reactions to
@@ -183,7 +182,11 @@ obj = model.objective
 new_model.objective = obj
 
 # Write the new model a json file
-new_model_file = "filtered_" + model_file
+new_model_file = model_file.split("/")
+if len(new_model_file) > 1:
+    new_model_file = "/".join(new_model_file[:-1]) + "/filtered_" + new_model_file[-1]
+else:
+    new_model_file = "filtered_" + new_model_file[0]
 cobra.io.save_json_model(new_model, new_model_file)
 
 # Print a summary, along with lists of missing genes and reactions
