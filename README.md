@@ -5,7 +5,7 @@ and microbial metabolism FBA workshop.
 
 ## Filtering an existing FBA model by sequence similarity as the basis for a new one
 
-These slides—--in macOS Keynote, PDF, and Powerpoint format---walk through a 
+These slides - in macOS Keynote, PDF, and Powerpoint format - walk through a 
 basic example of how to take an existing flux balance analysis (FBA) metabolic
 model (in .json format in the example) and filter it down based on BLAST hits 
 to protein sequences from another genome. This filtered down model could be
